@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/local_mall"
+        android:enabled="true"
+        android:icon="@drawable/local_mall"
+        android:title="@string/local_mall"/>
+    <item
+        android:id="@+id/farmer"
+        android:enabled="true"
+        android:icon="@drawable/farmer"
+        android:title="@string/farmer"/>
+    <item
+        android:id="@+id/info_hub"
+        android:enabled="true"
+        android:icon="@drawable/school"
+        android:title="@string/school"/>
+    <item
+        android:id="@+id/agro_news"
+        android:enabled="true"
+        android:icon="@drawable/full_coverage"
+        android:title="@string/full_coverage"/>
+    <item
+        android:id="@+id/agrometer"
+        android:enabled="true"
+        android:icon="@drawable/agrometer"
+        android:title="@string/agrometer"/>
+</menu>

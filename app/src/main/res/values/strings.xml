@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Kalo</string>
+    <string name="local_mall">მაღაზია</string>
+    <string name="farmer">მრჩეველი</string>
+    <string name="school">ინფოჰაბი</string>
+    <string name="full_coverage">აგრონიუსი</string>
+    <string name="agrometer">აგრომეტრი</string>
 </resources>
