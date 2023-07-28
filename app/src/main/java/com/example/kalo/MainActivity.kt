@@ -1,11 +1,8 @@
 package com.example.kalo
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.webkit.WebResourceRequest
-import android.webkit.WebResourceResponse
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,7 +12,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bottomNavigation: BottomNavigationView
 
     private var baseUrl: String = "https://kalo.ge/"
-
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,29 +23,32 @@ class MainActivity : AppCompatActivity() {
 
         webView.webViewClient = WebViewClient()
         webView.settings.javaScriptEnabled = true
-        webView.loadUrl(baseUrl)
+        val headers: MutableMap<String, String> = HashMap()
+        headers["isMobApp"] = "true"
+
+        webView.loadUrl(baseUrl, headers)
 
         bottomNavigation.selectedItemId = R.id.local_mall
         bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.local_mall -> {
-                    webView.loadUrl(baseUrl)
+                    webView.loadUrl(baseUrl, headers)
                     true
                 }
                 R.id.farmer -> {
-                    webView.loadUrl("$baseUrl/კონსულტაცია/")
+                    webView.loadUrl("$baseUrl/კონსულტაცია/", headers)
                     true
                 }
                 R.id.info_hub -> {
-                    webView.loadUrl("$baseUrl/my-account/")
+                    webView.loadUrl("$baseUrl/my-account/", headers)
                     true
                 }
                 R.id.agro_news -> {
-                    webView.loadUrl("$baseUrl/news/")
+                    webView.loadUrl("$baseUrl/news/", headers)
                     true
                 }
                 R.id.agrometer -> {
-                    webView.loadUrl("$baseUrl/აგრომეტრი/")
+                    webView.loadUrl("$baseUrl/აგრომეტრი/", headers)
                     true
                 }
                 else -> false
