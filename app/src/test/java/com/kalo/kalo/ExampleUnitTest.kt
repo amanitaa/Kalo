@@ -1,4 +1,4 @@
-package com.example.kalo
+package com.kalo.kalo
 
 import org.junit.Test
 

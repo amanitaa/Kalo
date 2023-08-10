@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.kalo'
+    namespace 'com.kalo.kalo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.kalo"
+        applicationId "com.kalo.kalo"
         minSdk 24
         targetSdk 33
         versionCode 1

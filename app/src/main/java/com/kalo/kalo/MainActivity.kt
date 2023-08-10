@@ -1,4 +1,4 @@
-package com.example.kalo
+package com.kalo.kalo
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
